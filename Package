@@ -1,1 +1,36 @@
+//Create a package named animals and a class named Dog in that package.
 
+package animals;
+
+public class Dog {
+    public void bark() {
+        System.out.println("Woof! Woof!");
+    }
+}
+
+
+//Create another package named zoo and a class named ZooKeeper in that package. This class will use the Dog class from the animals package.
+
+package zoo;
+
+import animals.Dog; // Import the Dog class from the animals package
+
+public class ZooKeeper {
+    public void makeDogBark() {
+        Dog dog = new Dog();
+        dog.bark();
+    }
+}
+
+import zoo.ZooKeeper; // Import the ZooKeeper class from the zoo package
+
+public class Main {
+    public static void main(String[] args) {
+        ZooKeeper zooKeeper = new ZooKeeper();
+        zooKeeper.makeDogBark();
+    }
+}
+
+
+//output 
+Woof! Woof!
